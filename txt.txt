@@ -1,0 +1,8 @@
+            AGENT_GLOBALS = get_agent_globals()
+            llm_client = AGENT_GLOBALS.llm_client
+
+            with open as f:
+                f.write("Could not detect separator for file: {}\n".format(path))
+
+            llm_client.invoke()
+                
