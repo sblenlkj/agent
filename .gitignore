@@ -18,7 +18,6 @@ output/smoke_tests*
 # Data
 catboost_info/
 logs/
-output/debug*
 
 .vscode
 
