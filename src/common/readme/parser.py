@@ -12,12 +12,9 @@ from src.common.readme.models import (
     ReadmeParseArtifacts,
     ReadmeParseResponse,
 )
+from src.common.readme.exceptions import ReadmeParsingError
 from src.common.readme.prompt_builder import ReadmePromptBuilder
 from src.common.runtime import GLOBAL_RUNTIME_BUDGET
-
-
-class ReadmeParsingError(Exception):
-    pass
 
 
 class ReadmeParser:

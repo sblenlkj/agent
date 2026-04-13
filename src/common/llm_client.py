@@ -22,15 +22,9 @@ from src.common.exceptions import (
     LLMConfigurationError,
     LLMEmptyResponseError,
     LLMInvocationError,
+    LLMJsonExtractionError,
+    LLMJsonValidationError,
 )
-
-class LLMJsonExtractionError(Exception):
-    pass
-
-
-class LLMJsonValidationError(Exception):
-    pass
-
 
 class GigaChatClient:
     def __init__(

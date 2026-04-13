@@ -10,7 +10,7 @@ from src.common.logging_setup import setup_logging
 
 from src.common.paths import PATHS
 
-
+import os
 
 def main(input_from_cache: bool = False) -> None:
     load_dotenv()
@@ -21,6 +21,8 @@ def main(input_from_cache: bool = False) -> None:
         data_dir=PATHS.data_dir,
         llm_client=LLMClient(provider="gigachat"),
     )
+
+    print(os.getenv("GIGACHAT_CREDENTIALS"))
 
     graph = build_agent_graph(input_from_cache)
     result = graph.invoke(AgentRunState())

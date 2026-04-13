@@ -11,12 +11,9 @@ from src.common.joins.feature_planning_v1.models import TableFeaturePlan
 from src.common.joins.feature_planning_v1.prompt_builder import (
     TableFeaturePlanningPromptBuilder,
 )
+from src.common.joins.feature_planning_v1.exceptions import TableFeaturePlanningError
 from src.common.llm_client import LLMClient
 from src.common.runtime import GLOBAL_RUNTIME_BUDGET
-
-
-class TableFeaturePlanningError(Exception):
-    pass
 
 
 class TableFeaturePlanningParser:

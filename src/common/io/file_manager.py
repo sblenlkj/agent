@@ -5,13 +5,11 @@ from pathlib import Path
 import pandas as pd
 from loguru import logger
 
+from src.common.io.exceptions import SeparatorDetectionError
 from src.common.llm_client import LLMClient
 
 COMMON_SEPARATORS = [",", ";", "\t", "|"]
-CLIENT = LLMClient()
-
-class SeparatorDetectionError(Exception):
-    pass
+CLIENT = None # LLMClient()
 
 
 class FileManager:

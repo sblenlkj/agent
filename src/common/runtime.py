@@ -6,9 +6,7 @@ from dataclasses import dataclass
 from loguru import logger
 
 from src.common.constraints import MAX_RUNTIME_SEC
-
-class RuntimeBudgetExceededError(Exception):
-    pass
+from src.common.exceptions import RuntimeBudgetExceededError
 
 
 @dataclass(frozen=True)

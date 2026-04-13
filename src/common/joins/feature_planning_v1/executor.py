@@ -7,12 +7,8 @@ from loguru import logger
 
 from src.common.io.file_manager import FileManager
 from src.common.io.models import InputBundle
+from src.common.joins.feature_planning_v1.exceptions import FeatureExecutionError
 from src.common.joins.feature_planning_v1.models import FeatureAction, TableFeaturePlan
-
-
-class FeatureExecutionError(Exception):
-    pass
-
 
 
 

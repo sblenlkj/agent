@@ -7,15 +7,8 @@ import numpy as np
 import pandas as pd
 from loguru import logger
 
+from src.common.feature_codegen.exceptions import GeneratedCodeExecutionError, GeneratedCodeSecurityError
 from src.common.feature_codegen.models import GeneratedFeatureCode
-
-
-class GeneratedCodeSecurityError(Exception):
-    pass
-
-
-class GeneratedCodeExecutionError(Exception):
-    pass
 
 
 class FeatureCodeExecutor:

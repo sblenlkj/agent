@@ -5,12 +5,9 @@ from collections.abc import Mapping
 from loguru import logger
 
 from src.common.io.models import InputBundle, SourceTable
+from src.common.readme.exceptions import ReadmeMergeError
 from src.common.readme.models import ReadmeParseResponse, ReadmeTableDescription
 from src.common.schema.models import ColumnState
-
-
-class ReadmeMergeError(Exception):
-    pass
 
 
 class ReadmeBundleMerger:

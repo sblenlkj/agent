@@ -183,3 +183,23 @@ class OutputError(FeatureSelectionError):
 
 class SubmissionFormatError(OutputError):
     """Submission format is invalid."""
+
+
+# =========================
+# Runtime
+# =========================
+
+class RuntimeBudgetExceededError(Exception):
+    pass
+
+
+# =========================
+# LLM JSON helpers
+# =========================
+
+class LLMJsonExtractionError(Exception):
+    pass
+
+
+class LLMJsonValidationError(Exception):
+    pass

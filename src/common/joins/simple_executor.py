@@ -9,11 +9,8 @@ from typing import Mapping
 
 from src.common.io.file_manager import FileManager
 from src.common.io.models import InputBundle
+from src.common.joins.exceptions import JoinExecutionError
 from src.common.joins.planner_module.models import JoinEdge, JoinPlan
-
-
-class JoinExecutionError(Exception):
-    pass
 
 
 class JoinExecutor:

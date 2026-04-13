@@ -5,17 +5,10 @@ from pathlib import Path
 import pandas as pd
 from loguru import logger
 
+from src.common.io.exceptions import MissingRequiredFileError, RepositoryError
 from src.common.io.file_manager import FileManager
 from src.common.io.models import InputBundle, SourceTable
 from src.common.schema.models import ColumnState
-
-
-class MissingRequiredFileError(Exception):
-    pass
-
-
-class RepositoryError(Exception):
-    pass
 
 
 class InputRepository:
